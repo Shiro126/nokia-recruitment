@@ -53,10 +53,10 @@ bool DataLoader::isOpen() const {
 }
 
 bool DataLoader::hasX() {
-    return expressionString.find('x') == std::string::npos;
+    return expressionString.find('x') != std::string::npos;
 }
 
 bool DataLoader::hasCorrectCharacters() {
     std::regex reg{"[^+\\-\\\\*0-9 x]+"};
-    return !std::regex_match(expressionString, reg);
+    return !std::regex_search(expressionString, reg);
 }

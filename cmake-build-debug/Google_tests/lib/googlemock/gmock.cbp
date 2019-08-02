@@ -5,7 +5,7 @@
 		<Option title="gmock"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googlemock\;CMake Files\Google_tests\lib\googlemock\cmake\;CMake Files\Google_tests\lib\googletest\;CMake Files\Google_tests\lib\googletest\cmake\;CMake Files\Google_tests\tests\;CMake Files\source\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/Google_tests/lib/googlemock"/>
@@ -24,6 +24,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
@@ -51,6 +52,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
@@ -78,6 +80,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
@@ -105,6 +108,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googlemock"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
@@ -132,6 +136,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -157,6 +162,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -182,6 +188,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -207,6 +214,7 @@
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/source"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include"/>
 					<Add directory="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -270,6 +278,12 @@
 		</Unit>
 		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/cmake/internal_utils.cmake">
 			<Option virtualFolder="CMake Files\Google_tests\lib\googletest\cmake\"/>
+		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/Google_tests/tests/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\Google_tests\tests\"/>
+		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/source/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\source\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

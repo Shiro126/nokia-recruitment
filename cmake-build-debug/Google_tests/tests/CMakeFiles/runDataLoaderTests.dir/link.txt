@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/runDataLoaderTests.dir/DataLoaderTest.cpp.o  -o runDataLoaderTests ../../lib/libgtestd.a ../../lib/libgtest_maind.a -lsource ../../lib/libgtestd.a -lpthread 

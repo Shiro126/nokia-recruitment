@@ -65,13 +65,52 @@ CMAKE_SOURCE_DIR = /home/shiro/CLionProjects/PrefixNotationParser
 CMAKE_BINARY_DIR = /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/PrefixTest.dir
+
+# All Build rule for target.
+CMakeFiles/PrefixTest.dir/all: googletest-master/googlemock/CMakeFiles/gmock.dir/all
+CMakeFiles/PrefixTest.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/depend
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=4,5,6,7 "Built target PrefixTest"
+.PHONY : CMakeFiles/PrefixTest.dir/all
+
+# Include target in all.
+all: CMakeFiles/PrefixTest.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/PrefixTest.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PrefixTest.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/PrefixTest.dir/rule
+
+# Convenience name for target.
+PrefixTest: CMakeFiles/PrefixTest.dir/rule
+
+.PHONY : PrefixTest
+
+# clean rule for target.
+CMakeFiles/PrefixTest.dir/clean:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/clean
+.PHONY : CMakeFiles/PrefixTest.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/PrefixTest.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/PrefixNotationParser.dir
 
 # All Build rule for target.
-CMakeFiles/PrefixNotationParser.dir/all:
+CMakeFiles/PrefixNotationParser.dir/all: googletest-master/googlemock/CMakeFiles/gmock.dir/all
+CMakeFiles/PrefixNotationParser.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/depend
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target PrefixNotationParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target PrefixNotationParser"
 .PHONY : CMakeFiles/PrefixNotationParser.dir/all
 
 # Include target in all.
@@ -81,7 +120,7 @@ all: CMakeFiles/PrefixNotationParser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PrefixNotationParser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PrefixNotationParser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/PrefixNotationParser.dir/rule
@@ -102,229 +141,211 @@ clean: CMakeFiles/PrefixNotationParser.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Google_tests
+# Directory level rules for directory googletest-master
 
 # Convenience name for "all" pass in the directory.
-Google_tests/all: Google_tests/lib/all
+googletest-master/all: googletest-master/googlemock/all
 
-.PHONY : Google_tests/all
+.PHONY : googletest-master/all
 
 # Convenience name for "clean" pass in the directory.
-Google_tests/clean: Google_tests/lib/clean
+googletest-master/clean: googletest-master/googlemock/clean
 
-.PHONY : Google_tests/clean
+.PHONY : googletest-master/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Google_tests/preinstall: Google_tests/lib/preinstall
+googletest-master/preinstall: googletest-master/googlemock/preinstall
 
-.PHONY : Google_tests/preinstall
+.PHONY : googletest-master/preinstall
 
 #=============================================================================
-# Directory level rules for directory Google_tests/lib
+# Directory level rules for directory googletest-master/googlemock
 
 # Convenience name for "all" pass in the directory.
-Google_tests/lib/all: Google_tests/lib/googlemock/all
+googletest-master/googlemock/all: googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
+googletest-master/googlemock/all: googletest-master/googlemock/CMakeFiles/gmock.dir/all
+googletest-master/googlemock/all: googletest-master/googletest/all
 
-.PHONY : Google_tests/lib/all
-
-# Convenience name for "clean" pass in the directory.
-Google_tests/lib/clean: Google_tests/lib/googlemock/clean
-
-.PHONY : Google_tests/lib/clean
-
-# Convenience name for "preinstall" pass in the directory.
-Google_tests/lib/preinstall: Google_tests/lib/googlemock/preinstall
-
-.PHONY : Google_tests/lib/preinstall
-
-#=============================================================================
-# Directory level rules for directory Google_tests/lib/googlemock
-
-# Convenience name for "all" pass in the directory.
-Google_tests/lib/googlemock/all: Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
-Google_tests/lib/googlemock/all: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
-Google_tests/lib/googlemock/all: Google_tests/lib/googletest/all
-
-.PHONY : Google_tests/lib/googlemock/all
+.PHONY : googletest-master/googlemock/all
 
 # Convenience name for "clean" pass in the directory.
-Google_tests/lib/googlemock/clean: Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean
-Google_tests/lib/googlemock/clean: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean
-Google_tests/lib/googlemock/clean: Google_tests/lib/googletest/clean
+googletest-master/googlemock/clean: googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean
+googletest-master/googlemock/clean: googletest-master/googlemock/CMakeFiles/gmock.dir/clean
+googletest-master/googlemock/clean: googletest-master/googletest/clean
 
-.PHONY : Google_tests/lib/googlemock/clean
+.PHONY : googletest-master/googlemock/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Google_tests/lib/googlemock/preinstall: Google_tests/lib/googletest/preinstall
+googletest-master/googlemock/preinstall: googletest-master/googletest/preinstall
 
-.PHONY : Google_tests/lib/googlemock/preinstall
+.PHONY : googletest-master/googlemock/preinstall
 
 #=============================================================================
-# Target rules for target Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir
+# Target rules for target googletest-master/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
-Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/depend
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target gmock_main"
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
+googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: googletest-master/googlemock/CMakeFiles/gmock.dir/all
+googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/depend
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=10,11 "Built target gmock_main"
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
-all: Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
+all: googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
+googletest-master/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/rule
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
-gmock_main: Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/rule
+gmock_main: googletest-master/googlemock/CMakeFiles/gmock_main.dir/rule
 
 .PHONY : gmock_main
 
 # clean rule for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean:
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean
+googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean:
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean
 
 # clean rule for target.
-clean: Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/clean
+clean: googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target Google_tests/lib/googlemock/CMakeFiles/gmock.dir
+# Target rules for target googletest-master/googlemock/CMakeFiles/gmock.dir
 
 # All Build rule for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/depend
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=3,4 "Built target gmock"
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
+googletest-master/googlemock/CMakeFiles/gmock.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/depend
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target gmock"
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
-all: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
+all: googletest-master/googlemock/CMakeFiles/gmock.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
+googletest-master/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googlemock/CMakeFiles/gmock.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 googletest-master/googlemock/CMakeFiles/gmock.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock.dir/rule
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
-gmock: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/rule
+gmock: googletest-master/googlemock/CMakeFiles/gmock.dir/rule
 
 .PHONY : gmock
 
 # clean rule for target.
-Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean:
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean
-.PHONY : Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean
+googletest-master/googlemock/CMakeFiles/gmock.dir/clean:
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/clean
+.PHONY : googletest-master/googlemock/CMakeFiles/gmock.dir/clean
 
 # clean rule for target.
-clean: Google_tests/lib/googlemock/CMakeFiles/gmock.dir/clean
+clean: googletest-master/googlemock/CMakeFiles/gmock.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory Google_tests/lib/googletest
+# Directory level rules for directory googletest-master/googletest
 
 # Convenience name for "all" pass in the directory.
-Google_tests/lib/googletest/all: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
-Google_tests/lib/googletest/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
+googletest-master/googletest/all: googletest-master/googletest/CMakeFiles/gtest_main.dir/all
+googletest-master/googletest/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 
-.PHONY : Google_tests/lib/googletest/all
+.PHONY : googletest-master/googletest/all
 
 # Convenience name for "clean" pass in the directory.
-Google_tests/lib/googletest/clean: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean
-Google_tests/lib/googletest/clean: Google_tests/lib/googletest/CMakeFiles/gtest.dir/clean
+googletest-master/googletest/clean: googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
+googletest-master/googletest/clean: googletest-master/googletest/CMakeFiles/gtest.dir/clean
 
-.PHONY : Google_tests/lib/googletest/clean
+.PHONY : googletest-master/googletest/clean
 
 # Convenience name for "preinstall" pass in the directory.
-Google_tests/lib/googletest/preinstall:
+googletest-master/googletest/preinstall:
 
-.PHONY : Google_tests/lib/googletest/preinstall
+.PHONY : googletest-master/googletest/preinstall
 
 #=============================================================================
-# Target rules for target Google_tests/lib/googletest/CMakeFiles/gtest_main.dir
+# Target rules for target googletest-master/googletest/CMakeFiles/gtest_main.dir
 
 # All Build rule for target.
-Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target gtest_main"
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
+googletest-master/googletest/CMakeFiles/gtest_main.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/depend
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+.PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
-all: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
+all: googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
+googletest-master/googletest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
+.PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
-gtest_main: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/rule
+gtest_main: googletest-master/googletest/CMakeFiles/gtest_main.dir/rule
 
 .PHONY : gtest_main
 
 # clean rule for target.
-Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean
+googletest-master/googletest/CMakeFiles/gtest_main.dir/clean:
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
+.PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
 
 # clean rule for target.
-clean: Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/clean
+clean: googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target Google_tests/lib/googletest/CMakeFiles/gtest.dir
+# Target rules for target googletest-master/googletest/CMakeFiles/gtest.dir
 
 # All Build rule for target.
-Google_tests/lib/googletest/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target gtest"
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
+googletest-master/googletest/CMakeFiles/gtest.dir/all:
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/depend
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gtest"
+.PHONY : googletest-master/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
-all: Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
+all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-Google_tests/lib/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
+googletest-master/googletest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Google_tests/lib/googletest/CMakeFiles/gtest.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest.dir/rule
+.PHONY : googletest-master/googletest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
-gtest: Google_tests/lib/googletest/CMakeFiles/gtest.dir/rule
+gtest: googletest-master/googletest/CMakeFiles/gtest.dir/rule
 
 .PHONY : gtest
 
 # clean rule for target.
-Google_tests/lib/googletest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/clean
-.PHONY : Google_tests/lib/googletest/CMakeFiles/gtest.dir/clean
+googletest-master/googletest/CMakeFiles/gtest.dir/clean:
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/clean
+.PHONY : googletest-master/googletest/CMakeFiles/gtest.dir/clean
 
 # clean rule for target.
-clean: Google_tests/lib/googletest/CMakeFiles/gtest.dir/clean
+clean: googletest-master/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : clean
 

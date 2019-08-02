@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/PrefixNotationParser.dir/main.cpp.o  -o PrefixNotationParser 
+/usr/bin/c++  -g   CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o CMakeFiles/PrefixNotationParser.dir/main.cpp.o  -o PrefixNotationParser lib/libgmockd.a lib/libgtestd.a -lpthread 

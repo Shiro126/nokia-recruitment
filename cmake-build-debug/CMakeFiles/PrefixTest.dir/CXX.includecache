@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/DataLoader.h
+string
+-
+
+../include/InvalidExpressionError.h
+utility
+-
+string
+-
+
+/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.cpp
+fstream
+-
+regex
+-
+DataLoader.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.h
+InvalidExpressionError.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/InvalidExpressionError.h
+

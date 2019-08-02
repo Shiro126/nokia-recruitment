@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -Wall -Wshadow -Werror -Wno-error=dangling-else -DGTEST_HAS_PTH
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include -isystem /home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest 
+CXX_INCLUDES = -I/home/shiro/CLionProjects/PrefixNotationParser/source -isystem /home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest/include -isystem /home/shiro/CLionProjects/PrefixNotationParser/Google_tests/lib/googletest 
 

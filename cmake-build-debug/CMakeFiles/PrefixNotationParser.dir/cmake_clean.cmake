@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o"
   "CMakeFiles/PrefixNotationParser.dir/main.cpp.o"
   "PrefixNotationParser.pdb"
   "PrefixNotationParser"

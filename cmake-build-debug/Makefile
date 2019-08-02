@@ -68,16 +68,17 @@ install/strip/fast: preinstall/fast
 	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -90,6 +91,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -99,18 +111,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/shiro/Programms/clion-2018.3.4/bin/cmake/linux/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -157,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named PrefixTest
+
+# Build rule for target.
+PrefixTest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PrefixTest
+.PHONY : PrefixTest
+
+# fast build rule for target.
+PrefixTest/fast:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/build
+.PHONY : PrefixTest/fast
+
+#=============================================================================
 # Target rules for targets named PrefixNotationParser
 
 # Build rule for target.
@@ -179,7 +192,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -192,7 +205,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) -f Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -205,7 +218,7 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
 #=============================================================================
@@ -218,7 +231,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) -f Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 main.o: main.cpp.o
@@ -248,6 +261,90 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/DataLoader.o: src/DataLoader.cpp.o
+
+.PHONY : src/DataLoader.o
+
+# target to build an object file
+src/DataLoader.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o
+.PHONY : src/DataLoader.cpp.o
+
+src/DataLoader.i: src/DataLoader.cpp.i
+
+.PHONY : src/DataLoader.i
+
+# target to preprocess a source file
+src/DataLoader.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.i
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.i
+.PHONY : src/DataLoader.cpp.i
+
+src/DataLoader.s: src/DataLoader.cpp.s
+
+.PHONY : src/DataLoader.s
+
+# target to generate assembly for a file
+src/DataLoader.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.s
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.s
+.PHONY : src/DataLoader.cpp.s
+
+tests/DataLoaderTest.o: tests/DataLoaderTest.cpp.o
+
+.PHONY : tests/DataLoaderTest.o
+
+# target to build an object file
+tests/DataLoaderTest.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o
+.PHONY : tests/DataLoaderTest.cpp.o
+
+tests/DataLoaderTest.i: tests/DataLoaderTest.cpp.i
+
+.PHONY : tests/DataLoaderTest.i
+
+# target to preprocess a source file
+tests/DataLoaderTest.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.i
+.PHONY : tests/DataLoaderTest.cpp.i
+
+tests/DataLoaderTest.s: tests/DataLoaderTest.cpp.s
+
+.PHONY : tests/DataLoaderTest.s
+
+# target to generate assembly for a file
+tests/DataLoaderTest.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.s
+.PHONY : tests/DataLoaderTest.cpp.s
+
+tests/main_test.o: tests/main_test.cpp.o
+
+.PHONY : tests/main_test.o
+
+# target to build an object file
+tests/main_test.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o
+.PHONY : tests/main_test.cpp.o
+
+tests/main_test.i: tests/main_test.cpp.i
+
+.PHONY : tests/main_test.i
+
+# target to preprocess a source file
+tests/main_test.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/main_test.cpp.i
+.PHONY : tests/main_test.cpp.i
+
+tests/main_test.s: tests/main_test.cpp.s
+
+.PHONY : tests/main_test.s
+
+# target to generate assembly for a file
+tests/main_test.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/main_test.cpp.s
+.PHONY : tests/main_test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -255,11 +352,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... PrefixTest"
 	@echo "... PrefixNotationParser"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... list_install_components"
-	@echo "... install/local"
 	@echo "... install"
 	@echo "... gmock_main"
 	@echo "... gmock"
@@ -268,6 +366,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/DataLoader.o"
+	@echo "... src/DataLoader.i"
+	@echo "... src/DataLoader.s"
+	@echo "... tests/DataLoaderTest.o"
+	@echo "... tests/DataLoaderTest.i"
+	@echo "... tests/DataLoaderTest.s"
+	@echo "... tests/main_test.o"
+	@echo "... tests/main_test.i"
+	@echo "... tests/main_test.s"
 .PHONY : help
 
 

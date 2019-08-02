@@ -10,19 +10,15 @@
 string
 -
 
-../include/InvalidExpressionError.h
+../include/Node.h
 utility
 -
-string
--
 
-/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.cpp
-fstream
--
-regex
+/home/shiro/CLionProjects/PrefixNotationParser/main.cpp
+iostream
 -
 DataLoader.h
-/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.h
-InvalidExpressionError.h
-/home/shiro/CLionProjects/PrefixNotationParser/src/InvalidExpressionError.h
+/home/shiro/CLionProjects/PrefixNotationParser/DataLoader.h
+Node.h
+/home/shiro/CLionProjects/PrefixNotationParser/Node.h
 

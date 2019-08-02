@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.cpp" "/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o"
   "/home/shiro/CLionProjects/PrefixNotationParser/tests/DataLoaderTest.cpp" "/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o"
+  "/home/shiro/CLionProjects/PrefixNotationParser/tests/NodeTest.cpp" "/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o"
   "/home/shiro/CLionProjects/PrefixNotationParser/tests/main_test.cpp" "/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

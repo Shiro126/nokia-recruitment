@@ -318,6 +318,33 @@ tests/DataLoaderTest.cpp.s:
 	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.s
 .PHONY : tests/DataLoaderTest.cpp.s
 
+tests/NodeTest.o: tests/NodeTest.cpp.o
+
+.PHONY : tests/NodeTest.o
+
+# target to build an object file
+tests/NodeTest.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o
+.PHONY : tests/NodeTest.cpp.o
+
+tests/NodeTest.i: tests/NodeTest.cpp.i
+
+.PHONY : tests/NodeTest.i
+
+# target to preprocess a source file
+tests/NodeTest.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.i
+.PHONY : tests/NodeTest.cpp.i
+
+tests/NodeTest.s: tests/NodeTest.cpp.s
+
+.PHONY : tests/NodeTest.s
+
+# target to generate assembly for a file
+tests/NodeTest.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.s
+.PHONY : tests/NodeTest.cpp.s
+
 tests/main_test.o: tests/main_test.cpp.o
 
 .PHONY : tests/main_test.o
@@ -372,6 +399,9 @@ help:
 	@echo "... tests/DataLoaderTest.o"
 	@echo "... tests/DataLoaderTest.i"
 	@echo "... tests/DataLoaderTest.s"
+	@echo "... tests/NodeTest.o"
+	@echo "... tests/NodeTest.i"
+	@echo "... tests/NodeTest.s"
 	@echo "... tests/main_test.o"
 	@echo "... tests/main_test.i"
 	@echo "... tests/main_test.s"

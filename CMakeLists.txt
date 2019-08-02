@@ -13,7 +13,7 @@ set(SOURCE_FILES
 
 set(TEST_SOURCES
         tests/main_test.cpp
-        tests/DataLoaderTest.cpp) #plik z funkcją main() do testów
+        tests/DataLoaderTest.cpp tests/NodeTest.cpp) #plik z funkcją main() do testów
 
 add_subdirectory(googletest-master)
 link_libraries(gmock)

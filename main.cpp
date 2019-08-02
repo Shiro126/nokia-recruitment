@@ -1,5 +1,6 @@
 #include <iostream>
 #include "DataLoader.h"
+#include "Node.h"
 
 int main() {
     DataLoader loader{"get_x_test.txt"};

@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o  -o PrefixTest lib/libgmockd.a lib/libgtestd.a -lpthread 
+/usr/bin/c++  -g   CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o  -o PrefixTest lib/libgmockd.a lib/libgtestd.a -lpthread 

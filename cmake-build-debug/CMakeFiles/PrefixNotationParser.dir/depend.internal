@@ -3,6 +3,7 @@
 
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o
  ../include/DataLoader.h
+ ../include/Node.h
  /home/shiro/CLionProjects/PrefixNotationParser/main.cpp
 CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o
  ../include/DataLoader.h

@@ -4,8 +4,14 @@
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o
  ../include/DataLoader.h
  ../include/Node.h
+ ../include/PrefixExpression.h
  /home/shiro/CLionProjects/PrefixNotationParser/main.cpp
 CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o
  ../include/DataLoader.h
  ../include/InvalidExpressionError.h
  /home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.cpp
+CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o
+ ../include/InvalidExpressionError.h
+ ../include/Node.h
+ ../include/PrefixExpression.h
+ /home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp

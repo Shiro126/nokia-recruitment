@@ -3,9 +3,15 @@
 
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o: ../include/DataLoader.h
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o: ../include/Node.h
+CMakeFiles/PrefixNotationParser.dir/main.cpp.o: ../include/PrefixExpression.h
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o: ../include/DataLoader.h
 CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o: ../include/InvalidExpressionError.h
 CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.o: ../src/DataLoader.cpp
+
+CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o: ../include/InvalidExpressionError.h
+CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o: ../include/Node.h
+CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o: ../include/PrefixExpression.h
+CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o: ../src/PrefixExpression.cpp
 

@@ -429,7 +429,17 @@
 			<Option target="PrefixTest"/>
 			<Option target="PrefixNotationParser"/>
 		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp">
+			<Option target="PrefixTest"/>
+			<Option target="PrefixNotationParser"/>
+		</Unit>
 		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/tests/DataLoaderTest.cpp">
+			<Option target="PrefixTest"/>
+		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/tests/NodeTest.cpp">
+			<Option target="PrefixTest"/>
+		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/tests/PrefixExpressionTest.cpp">
 			<Option target="PrefixTest"/>
 		</Unit>
 		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/tests/main_test.cpp">

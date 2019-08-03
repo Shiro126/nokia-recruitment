@@ -9,17 +9,18 @@ include_directories(include                     #nasz folder include
         googletest-master/googletest/include)
 
 set(SOURCE_FILES
-        src/DataLoader.cpp)
+        src/DataLoader.cpp
+        src/PrefixExpression.cpp )
 
 set(TEST_SOURCES
         tests/main_test.cpp
-        tests/DataLoaderTest.cpp) #plik z funkcją main() do testów
+        tests/DataLoaderTest.cpp
+        tests/NodeTest.cpp tests/PrefixExpressionTest.cpp)
 
 add_subdirectory(googletest-master)
 link_libraries(gmock)
 
 add_executable(PrefixNotationParser ${SOURCE_FILES} main.cpp)
-#add_executable(PrefixNotationParser main.cpp DataLoader.cpp DataLoader.h InvalidExpressionError.h)
 
 add_executable(PrefixTest ${SOURCE_FILES} ${TEST_SOURCES})
 

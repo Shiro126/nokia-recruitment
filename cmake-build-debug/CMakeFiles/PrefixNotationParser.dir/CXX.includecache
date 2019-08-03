@@ -6,23 +6,29 @@
 
 #IncludeRegexTransform: 
 
-../include/DataLoader.h
-string
--
-
 ../include/InvalidExpressionError.h
 utility
 -
 string
 -
 
-/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.cpp
-fstream
+../include/Node.h
+utility
 -
-regex
+string
 -
-DataLoader.h
-/home/shiro/CLionProjects/PrefixNotationParser/src/DataLoader.h
+
+../include/PrefixExpression.h
+Node.h
+../include/Node.h
+string
+-
+
+/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp
+PrefixExpression.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.h
+iostream
+-
 InvalidExpressionError.h
-/home/shiro/CLionProjects/PrefixNotationParser/src/InvalidExpressionError.h
+-
 

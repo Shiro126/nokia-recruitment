@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o"
+  "CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.o"
   "CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o"
   "CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o"
+  "CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o"
+  "CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o"
   "PrefixTest.pdb"
   "PrefixTest"
 )

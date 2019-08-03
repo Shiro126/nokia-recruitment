@@ -291,6 +291,36 @@ src/DataLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.s
 .PHONY : src/DataLoader.cpp.s
 
+src/PrefixExpression.o: src/PrefixExpression.cpp.o
+
+.PHONY : src/PrefixExpression.o
+
+# target to build an object file
+src/PrefixExpression.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.o
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.o
+.PHONY : src/PrefixExpression.cpp.o
+
+src/PrefixExpression.i: src/PrefixExpression.cpp.i
+
+.PHONY : src/PrefixExpression.i
+
+# target to preprocess a source file
+src/PrefixExpression.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.i
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.i
+.PHONY : src/PrefixExpression.cpp.i
+
+src/PrefixExpression.s: src/PrefixExpression.cpp.s
+
+.PHONY : src/PrefixExpression.s
+
+# target to generate assembly for a file
+src/PrefixExpression.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.s
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/PrefixExpression.cpp.s
+.PHONY : src/PrefixExpression.cpp.s
+
 tests/DataLoaderTest.o: tests/DataLoaderTest.cpp.o
 
 .PHONY : tests/DataLoaderTest.o
@@ -317,6 +347,60 @@ tests/DataLoaderTest.s: tests/DataLoaderTest.cpp.s
 tests/DataLoaderTest.cpp.s:
 	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.s
 .PHONY : tests/DataLoaderTest.cpp.s
+
+tests/NodeTest.o: tests/NodeTest.cpp.o
+
+.PHONY : tests/NodeTest.o
+
+# target to build an object file
+tests/NodeTest.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o
+.PHONY : tests/NodeTest.cpp.o
+
+tests/NodeTest.i: tests/NodeTest.cpp.i
+
+.PHONY : tests/NodeTest.i
+
+# target to preprocess a source file
+tests/NodeTest.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.i
+.PHONY : tests/NodeTest.cpp.i
+
+tests/NodeTest.s: tests/NodeTest.cpp.s
+
+.PHONY : tests/NodeTest.s
+
+# target to generate assembly for a file
+tests/NodeTest.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.s
+.PHONY : tests/NodeTest.cpp.s
+
+tests/PrefixExpressionTest.o: tests/PrefixExpressionTest.cpp.o
+
+.PHONY : tests/PrefixExpressionTest.o
+
+# target to build an object file
+tests/PrefixExpressionTest.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o
+.PHONY : tests/PrefixExpressionTest.cpp.o
+
+tests/PrefixExpressionTest.i: tests/PrefixExpressionTest.cpp.i
+
+.PHONY : tests/PrefixExpressionTest.i
+
+# target to preprocess a source file
+tests/PrefixExpressionTest.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.i
+.PHONY : tests/PrefixExpressionTest.cpp.i
+
+tests/PrefixExpressionTest.s: tests/PrefixExpressionTest.cpp.s
+
+.PHONY : tests/PrefixExpressionTest.s
+
+# target to generate assembly for a file
+tests/PrefixExpressionTest.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.s
+.PHONY : tests/PrefixExpressionTest.cpp.s
 
 tests/main_test.o: tests/main_test.cpp.o
 
@@ -369,9 +453,18 @@ help:
 	@echo "... src/DataLoader.o"
 	@echo "... src/DataLoader.i"
 	@echo "... src/DataLoader.s"
+	@echo "... src/PrefixExpression.o"
+	@echo "... src/PrefixExpression.i"
+	@echo "... src/PrefixExpression.s"
 	@echo "... tests/DataLoaderTest.o"
 	@echo "... tests/DataLoaderTest.i"
 	@echo "... tests/DataLoaderTest.s"
+	@echo "... tests/NodeTest.o"
+	@echo "... tests/NodeTest.i"
+	@echo "... tests/NodeTest.s"
+	@echo "... tests/PrefixExpressionTest.o"
+	@echo "... tests/PrefixExpressionTest.i"
+	@echo "... tests/PrefixExpressionTest.s"
 	@echo "... tests/main_test.o"
 	@echo "... tests/main_test.i"
 	@echo "... tests/main_test.s"

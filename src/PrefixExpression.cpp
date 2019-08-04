@@ -3,67 +3,90 @@
 //
 
 #include "PrefixExpression.h"
+#include "Node.h"
 #include <iostream>
 #include <InvalidExpressionError.h>
 
 void PrefixExpression::printInStandard() {
-    inorderHelper(head);
-
+    standardPrintHelper(root.get());
 }
 
 int PrefixExpression::calculate() {
-    return calculateHelper(head);
+    return calculateHelper(root.get());
 }
 
-int PrefixExpression::createFromString(std::string &basicString,int index, Node* newNode) {
-    int shift{};
-    while(isspace(basicString[index]))
+/*
+ * Function uses recursion to construct tree from data in string.
+ *
+ */
+int PrefixExpression::createFromStringHelper(const std::string &expressionString, int index, Node *newNode) {
+    int shift{}; //stores number of spaces
+
+    /*
+     * Keeping track of index and spaces before actual numbers is important for
+     * future function calls
+     */
+    while(isspace(expressionString[index]))
     {
         ++index;
         ++shift;
     }
-    if(isOperator(basicString[index]))
+    /*
+     * Check for trailing spaces
+     */
+    if(index >= expressionString.length())
+        throw InvalidExpressionError("Invalid expression");
+
+    /*
+     * If string at position index is a operator we branch the tree
+     * and expect new branches to close when number or 'x' is spotted
+     * in next function calls
+     */
+    if(isOperator(expressionString[index]))
     {
-        //TODO: add code for node creation
-        newNode->setValue(std::string(1,basicString[index]));
+        newNode->setValue(std::string(1,expressionString[index]));
 
-        newNode->setRSon(new Node{});
-        newNode ->setLSon(new Node{});
-        if(index + 1 >= basicString.length())
-            throw InvalidExpressionError("Invalid expression");
-        shift += createFromString(basicString,index+1, newNode->getLSon()) ;
-        if(shift + index + 1 >= basicString.length())
+        newNode->setRSon(std::move(std::make_unique<Node>()));
+        newNode ->setLSon(std::move(std::make_unique<Node>()));
+
+        if(index + 1 >= expressionString.length())
             throw InvalidExpressionError("Invalid expression");
 
-        shift += createFromString(basicString,index+shift+1, newNode->getRSon());
+        shift += createFromStringHelper(expressionString, index + 1, newNode->getLSon()) ;
+
+        if(shift + index + 1 >= expressionString.length())
+            throw InvalidExpressionError("Invalid expression");
+
+        shift += createFromStringHelper(expressionString, index + shift + 1, newNode->getRSon());
+
         return shift+1;
     }
-    else if (basicString[index]== 'x')
+    else if (expressionString[index]== 'x')
     {
-        newNode->setValue(std::string(1,basicString[index]));
+        newNode->setValue(std::string(1,expressionString[index]));
         return ++shift;
     }
     else
     {
         int numEnd = 0;
-        while(isdigit(basicString[index + numEnd]))
+        while(isdigit(expressionString[index + numEnd]))
         {
             ++numEnd;
         }
-        newNode->setValue(basicString.substr(index,numEnd));
+        newNode->setValue(expressionString.substr(index,numEnd));
         return numEnd + shift;
     }
 }
 
 bool PrefixExpression::isOperator(char c)
 {
-    return (c == '+') || (c == '-') || (c == '\\') || (c == '*');
+    return (c == '+') || (c == '-') || (c == '/') || (c == '*');
 }
 
 void PrefixExpression::print() {
-    if(head==nullptr)
+    if(root==nullptr)
         return;
-    printPreorder(head);
+    printPreorder(root.get());
 }
 /* Given a binary tree, print its nodes in preorder*/
 void PrefixExpression::printPreorder(Node* node)
@@ -81,7 +104,7 @@ void PrefixExpression::printPreorder(Node* node)
     printPreorder(node->getRSon());
 }
 
-void PrefixExpression::inorderHelper(Node *node) {
+void PrefixExpression::standardPrintHelper(Node *node) {
 
     if (node == nullptr)
         return;
@@ -94,7 +117,7 @@ void PrefixExpression::inorderHelper(Node *node) {
         }
 
     /* first recur on left child */
-    inorderHelper(node->getLSon());
+    standardPrintHelper(node->getLSon());
 
     if(openParenthesis)
     {
@@ -111,12 +134,11 @@ void PrefixExpression::inorderHelper(Node *node) {
             openParenthesis=true;
         }
     /* now recur on right child */
-    inorderHelper(node->getRSon());
+    standardPrintHelper(node->getRSon());
 
     if(openParenthesis)
     {
         std::cout<<") ";
-        openParenthesis=false;
     }
 }
 
@@ -132,7 +154,7 @@ int PrefixExpression::calculateHelper(Node *node) {
         if(node->getValue()[0]=='*')
             return calculateHelper(node->getLSon()) * calculateHelper(node -> getRSon());
 
-        if(node->getValue()[0]=='\\')
+        if(node->getValue()[0]=='/')
             return calculateHelper(node->getLSon()) / calculateHelper(node -> getRSon());
     } else if (node ->getValue()[0]=='x')
     {
@@ -144,5 +166,15 @@ int PrefixExpression::calculateHelper(Node *node) {
     }
 
     return 0;
+}
+
+void PrefixExpression::createFromString(const std::string &expressionString) {
+    createFromStringHelper(expressionString, 0, root.get());
+}
+
+void PrefixExpression::load(const DataLoader &loader) {
+    createFromString(loader.getExpressionString());
+    xValue = loader.getXValue();
+
 }
 

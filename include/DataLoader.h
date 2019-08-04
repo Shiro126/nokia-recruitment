@@ -12,21 +12,23 @@ class DataLoader {
 private:
     std::string expressionString{};
     int xValue{};
-    bool open = false;
+    bool loaded = false;
+
+    bool hasX();
+    bool hasCorrectCharacters();
+
 
 
 public:
-    bool isOpen() const;
+    bool hasData() const;
 
 
     explicit DataLoader(const std::string &fileName);
 
     int getXValue() const;
     const std::string &getExpressionString() const;
-    bool hasX();
-    bool hasCorrectCharacters();
 
-
+    void readFromFile(const std::string &fileName);
 };
 
 

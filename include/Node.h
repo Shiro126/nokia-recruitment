@@ -4,69 +4,63 @@
 
 #ifndef PREFIXNOTATIONPARSER_NODE_H
 #define PREFIXNOTATIONPARSER_NODE_H
+
 #include <utility>
 #include <string>
+#include <memory>
 
-
+/**
+ * Data structure that holds information about numbers or operators
+ */
 class Node {
 private:
-    Node* lSon{};
-    Node* rSon{};
+    std::unique_ptr<Node> lSon{};
+    std::unique_ptr<Node> rSon{};
     std::string value;
+
+
+    friend class PrefixExpression;
+
+
+    void setValue(const std::string &valueString);
+    /**
+     * Checks if node value contains one of allowed operators
+     * @return
+     */
+    bool isOperatorNode();
+
+    /**
+     * Checks if node contains one of following operators: '+', '-'
+     */
+    bool isLowPriorityOperatorNode();
+
+    /**
+     * Checks if node contains one of following operators: '*', '/'
+     * @return
+     */
+    bool isHighPriorityOperatorNode();
 public:
-   /* virtual ~Node() {
-        delete lSon;
-        delete rSon;
-    }*/
-
-   explicit Node(char i) : value(&""[i]) {
 
 
-   }
-
-public:
-    explicit Node(std::string value) : value(std::move(value))
-    {
-
-    }
-    Node(){}
-
-    Node *getLSon() const {
-        return lSon;
+    explicit Node(char i) : value(std::string(1,i)) {
     }
 
-    void setLSon(Node *lSon) {
-        Node::lSon = lSon;
+    explicit Node(std::string value) : value(std::move(value)) {
     }
 
-    Node *getRSon() const {
-        return rSon;
-    }
+    Node() = default;
 
-    void setRSon(Node *rSon) {
-        Node::rSon = rSon;
-    }
+    void setRSon(std::unique_ptr<Node> node);
 
-    const std::string &getValue() const {
-        return value;
-    }
+    void setLSon(std::unique_ptr<Node> node);
 
-    void setValue(const std::string &value) {
-        Node::value = value;
-    }
-    bool isOperatorNode()
-    {
-       return (value[0] == '*') || (value[0] == '\\')
-                || (value[0] == '-') || (value[0] == '+');
-    }
-    bool isLowPriorityOperatorNode()
-    {
-        return (value[0]=='+') || (value[0]=='-');
-    }
-    bool isHighPriorityOperatorNode(){
-        return (value[0]=='*') || (value[0]=='\\');
-   }
+    const std::string &getValue() const;
 
+    Node *getLSon() const;
+
+    Node *getRSon() const;
 };
+
+
 
 #endif //PREFIXNOTATIONPARSER_NODE_H

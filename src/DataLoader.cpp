@@ -9,34 +9,15 @@
 
 DataLoader::DataLoader(const std::string &fileName) {
 
-    std::ifstream file{fileName};
-
-    if(!file)
+    try
     {
-
-    } else {
-        open = true;
-        getline(file,expressionString);
-        if(!hasCorrectCharacters()) {
-            file.close();
-            throw InvalidExpressionError{"Invalid characters in input"};
-        }
-        if(hasX())
-        {
-            std::string tempX{};
-            getline(file,tempX);
-            try {
-                xValue = stoi(tempX);
-            } catch (std::invalid_argument invalidArgumentException)
-            {
-                //TODO: Handle the error
-                file.close();
-            }
-        }
-
-
+        readFromFile(fileName);
+    } catch (InvalidExpressionError &error)
+    {
+        loaded=false;
+        expressionString="";
+        throw;
     }
-
 
 }
 
@@ -48,8 +29,8 @@ int DataLoader::getXValue() const {
     return xValue;
 }
 
-bool DataLoader::isOpen() const {
-    return open;
+bool DataLoader::hasData() const {
+    return loaded;
 }
 
 bool DataLoader::hasX() {
@@ -57,6 +38,40 @@ bool DataLoader::hasX() {
 }
 
 bool DataLoader::hasCorrectCharacters() {
-    std::regex reg{"[^+\\-\\\\*0-9 x]+"};
+    std::regex reg{R"([^+\-/*0-9 x]+)"};
     return !std::regex_search(expressionString, reg);
+}
+
+void DataLoader::readFromFile(const std::string &fileName) {
+
+    std::ifstream file{fileName};
+
+    if(!file)
+    {
+        throw InvalidExpressionError{"Could not loaded the file named: " + fileName};
+
+    } else {
+        getline(file,expressionString);
+        if(!hasCorrectCharacters()) {
+            file.close();
+            throw InvalidExpressionError{"Invalid characters in input."};
+        }
+        if(hasX())
+        {
+            std::string tempX{};
+            getline(file,tempX);
+            try {
+                xValue = stoi(tempX);
+            } catch (std::invalid_argument &invalidArgumentException)
+            {
+                file.close();
+                throw InvalidExpressionError{"X value is invalid."};
+            }
+        }
+        loaded = true;
+
+    }
+
+
+
 }

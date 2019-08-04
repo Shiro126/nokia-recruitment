@@ -72,7 +72,7 @@ CMakeFiles/PrefixTest.dir/all: googletest-master/googlemock/CMakeFiles/gmock.dir
 CMakeFiles/PrefixTest.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/depend
 	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=5,6,7,8,9,10,11 "Built target PrefixTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=6,7,8,9,10,11,12,13 "Built target PrefixTest"
 .PHONY : CMakeFiles/PrefixTest.dir/all
 
 # Include target in all.
@@ -82,7 +82,7 @@ all: CMakeFiles/PrefixTest.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PrefixTest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PrefixTest.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/PrefixTest.dir/rule
@@ -110,7 +110,7 @@ CMakeFiles/PrefixNotationParser.dir/all: googletest-master/googlemock/CMakeFiles
 CMakeFiles/PrefixNotationParser.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/depend
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target PrefixNotationParser"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target PrefixNotationParser"
 .PHONY : CMakeFiles/PrefixNotationParser.dir/all
 
 # Include target in all.
@@ -120,7 +120,7 @@ all: CMakeFiles/PrefixNotationParser.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/PrefixNotationParser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PrefixNotationParser.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/PrefixNotationParser.dir/rule
@@ -188,7 +188,7 @@ googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: googletest-master/go
 googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock_main.dir/build.make googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gmock_main"
 .PHONY : googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -225,7 +225,7 @@ clean: googletest-master/googlemock/CMakeFiles/gmock_main.dir/clean
 googletest-master/googlemock/CMakeFiles/gmock.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f googletest-master/googlemock/CMakeFiles/gmock.dir/build.make googletest-master/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=12,13 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=14,15 "Built target gmock"
 .PHONY : googletest-master/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -282,7 +282,7 @@ googletest-master/googletest/preinstall:
 googletest-master/googletest/CMakeFiles/gtest_main.dir/all: googletest-master/googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest_main.dir/build.make googletest-master/googletest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=20,21 "Built target gtest_main"
 .PHONY : googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -319,7 +319,7 @@ clean: googletest-master/googletest/CMakeFiles/gtest_main.dir/clean
 googletest-master/googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f googletest-master/googletest/CMakeFiles/gtest.dir/build.make googletest-master/googletest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=18,19 "Built target gtest"
 .PHONY : googletest-master/googletest/CMakeFiles/gtest.dir/all
 
 # Include target in all.

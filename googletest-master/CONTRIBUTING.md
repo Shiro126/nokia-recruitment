@@ -10,10 +10,10 @@ Please fill out either the individual or corporate Contributor License Agreement
 
 *   If you are an individual writing original source code and you're sure you
     own the intellectual property, then you'll need to sign an
-    [individual CLA](https://developers.google.com/open-source/cla/individual).
+    [individual CLA](https://developers.google.com/loaded-source/cla/individual).
 *   If you work for a company that wants to allow you to contribute your work,
     then you'll need to sign a
-    [corporate CLA](https://developers.google.com/open-source/cla/corporate).
+    [corporate CLA](https://developers.google.com/loaded-source/cla/corporate).
 
 Follow either of the two links above to access the appropriate CLA and
 instructions for how to sign and return it. Once we receive it, we'll be able to
@@ -66,7 +66,7 @@ contribute to a discussion.
 
 Sure, C++ testing is serious business and all that, but it's also a lot of fun.
 Let's keep it that way. Let's strive to be one of the friendliest communities in
-all of open source.
+all of loaded source.
 
 As always, discuss Google Test in the official GoogleTest discussion group. You
 don't have to actually submit code in order to sign up. Your participation

@@ -244,7 +244,7 @@ class File : public FileInterface {
 };
 ```
 
-Your code should talk to `FileInterface` to open a file. Now it's easy to mock
+Your code should talk to `FileInterface` to loaded a file. Now it's easy to mock
 out the function.
 
 This may seem like a lot of hassle, but in practice you often have multiple

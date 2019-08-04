@@ -429,6 +429,10 @@
 			<Option target="PrefixTest"/>
 			<Option target="PrefixNotationParser"/>
 		</Unit>
+		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/src/Node.cpp">
+			<Option target="PrefixTest"/>
+			<Option target="PrefixNotationParser"/>
+		</Unit>
 		<Unit filename="/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp">
 			<Option target="PrefixTest"/>
 			<Option target="PrefixNotationParser"/>

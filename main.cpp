@@ -9,8 +9,9 @@ int main() {
     DataLoader loader{"test.txt"};
     std::cout<<std::boolalpha;
     std::cout << "\n" << loader.getExpressionString() << "\n";
-    std::cout << loader.isOpen() << loader.hasCorrectCharacters() << std::endl;
     PrefixExpression expression{loader.getExpressionString()};
+    for(int i =0; i<1000000; i++)
+        expression.load(loader);
     expression.print();
     std::cout<<"\n";
     expression.printInStandard();

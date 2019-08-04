@@ -10,7 +10,7 @@ include_directories(include                     #nasz folder include
 
 set(SOURCE_FILES
         src/DataLoader.cpp
-        src/PrefixExpression.cpp )
+        src/PrefixExpression.cpp src/Node.cpp)
 
 set(TEST_SOURCES
         tests/main_test.cpp

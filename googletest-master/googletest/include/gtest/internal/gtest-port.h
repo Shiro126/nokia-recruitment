@@ -97,7 +97,7 @@
 //                              as a shared library.
 //   GTEST_DEFAULT_DEATH_TEST_STYLE
 //                            - The default value of --gtest_death_test_style.
-//                              The legacy default has been "fast" in the open
+//                              The legacy default has been "fast" in the loaded
 //                              source version since 2008. The recommended value
 //                              is "threadsafe", and can be set in
 //                              custom/gtest-port.h.

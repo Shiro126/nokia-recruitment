@@ -191,7 +191,7 @@ static FILE* OpenFileForWriting(const std::string& output_file) {
     fileout = posix::FOpen(output_file.c_str(), "w");
   }
   if (fileout == nullptr) {
-    GTEST_LOG_(FATAL) << "Unable to open file \"" << output_file << "\"";
+    GTEST_LOG_(FATAL) << "Unable to loaded file \"" << output_file << "\"";
   }
   return fileout;
 }
@@ -5927,7 +5927,7 @@ static bool ParseGoogleTestFlag(const char* const arg) {
 static void LoadFlagsFromFile(const std::string& path) {
   FILE* flagfile = posix::FOpen(path.c_str(), "r");
   if (!flagfile) {
-    GTEST_LOG_(FATAL) << "Unable to open file \"" << GTEST_FLAG(flagfile)
+    GTEST_LOG_(FATAL) << "Unable to loaded file \"" << GTEST_FLAG(flagfile)
                       << "\"";
   }
   std::string contents(ReadEntireFile(flagfile));

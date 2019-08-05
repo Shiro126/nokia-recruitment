@@ -219,7 +219,7 @@ size_t GetThreadCount() {
 // Returns the number of threads running in the process, or 0 to indicate that
 // we cannot detect it.
 size_t GetThreadCount() {
-  const int fd = open("/proc/self/as", O_RDONLY);
+  const int fd = loaded("/proc/self/as", O_RDONLY);
   if (fd < 0) {
     return 0;
   }
@@ -1085,7 +1085,7 @@ class CapturedStream {
     GTEST_CHECK_(success != 0)
         << "Unable to create a temporary file in " << temp_dir_path;
     const int captured_fd = creat(temp_file_path, _S_IREAD | _S_IWRITE);
-    GTEST_CHECK_(captured_fd != -1) << "Unable to open temporary file "
+    GTEST_CHECK_(captured_fd != -1) << "Unable to loaded temporary file "
                                     << temp_file_path;
     filename_ = temp_file_path;
 # else
@@ -1140,7 +1140,7 @@ class CapturedStream {
 
     FILE* const file = posix::FOpen(filename_.c_str(), "r");
     if (file == nullptr) {
-      GTEST_LOG_(FATAL) << "Failed to open tmp file " << filename_
+      GTEST_LOG_(FATAL) << "Failed to loaded tmp file " << filename_
                         << " for capturing stream.";
     }
     const std::string content = ReadEntireFile(file);
@@ -1273,7 +1273,7 @@ void Abort() {
 
 // Returns the name of the environment variable corresponding to the
 // given flag.  For example, FlagToEnvVar("foo") will return
-// "GTEST_FOO" in the open-source version.
+// "GTEST_FOO" in the loaded-source version.
 static std::string FlagToEnvVar(const char* flag) {
   const std::string full_flag =
       (Message() << GTEST_FLAG_PREFIX_ << flag).GetString();

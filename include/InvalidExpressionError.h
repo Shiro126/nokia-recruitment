@@ -9,14 +9,17 @@
 
 
 #include <string>
-
-class InvalidExpressionError {
+/**
+ * Custom error class for PrefixExpression and DataLoader
+ */
+class InvalidExpressionError : public std::exception {
 public:
-    const std::string &getErrorMessage() const {
-        return errorMessage;
+    const char *what() const noexcept override {
+        return errorMessage.c_str();
     }
 
-    InvalidExpressionError(std::string errorMessage) : errorMessage(std::move(errorMessage)) {}
+
+    explicit InvalidExpressionError(std::string errorMessage) : errorMessage(std::move(errorMessage)) {}
 
 private:
     std::string errorMessage;

@@ -6,6 +6,10 @@
 
 #IncludeRegexTransform: 
 
+../include/DataLoader.h
+string
+-
+
 ../include/InvalidExpressionError.h
 utility
 -
@@ -17,16 +21,22 @@ utility
 -
 string
 -
+memory
+-
 
 ../include/PrefixExpression.h
 Node.h
 ../include/Node.h
+DataLoader.h
+../include/DataLoader.h
 string
 -
 
 /home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp
 PrefixExpression.h
 /home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.h
+Node.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/Node.h
 iostream
 -
 InvalidExpressionError.h

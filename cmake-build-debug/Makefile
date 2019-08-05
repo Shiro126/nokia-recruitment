@@ -291,6 +291,36 @@ src/DataLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/DataLoader.cpp.s
 .PHONY : src/DataLoader.cpp.s
 
+src/Node.o: src/Node.cpp.o
+
+.PHONY : src/Node.o
+
+# target to build an object file
+src/Node.cpp.o:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/Node.cpp.o
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/Node.cpp.o
+.PHONY : src/Node.cpp.o
+
+src/Node.i: src/Node.cpp.i
+
+.PHONY : src/Node.i
+
+# target to preprocess a source file
+src/Node.cpp.i:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/Node.cpp.i
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/Node.cpp.i
+.PHONY : src/Node.cpp.i
+
+src/Node.s: src/Node.cpp.s
+
+.PHONY : src/Node.s
+
+# target to generate assembly for a file
+src/Node.cpp.s:
+	$(MAKE) -f CMakeFiles/PrefixTest.dir/build.make CMakeFiles/PrefixTest.dir/src/Node.cpp.s
+	$(MAKE) -f CMakeFiles/PrefixNotationParser.dir/build.make CMakeFiles/PrefixNotationParser.dir/src/Node.cpp.s
+.PHONY : src/Node.cpp.s
+
 src/PrefixExpression.o: src/PrefixExpression.cpp.o
 
 .PHONY : src/PrefixExpression.o
@@ -453,6 +483,9 @@ help:
 	@echo "... src/DataLoader.o"
 	@echo "... src/DataLoader.i"
 	@echo "... src/DataLoader.s"
+	@echo "... src/Node.o"
+	@echo "... src/Node.i"
+	@echo "... src/Node.s"
 	@echo "... src/PrefixExpression.o"
 	@echo "... src/PrefixExpression.i"
 	@echo "... src/PrefixExpression.s"

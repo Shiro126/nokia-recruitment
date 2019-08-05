@@ -1317,7 +1317,7 @@ static pid_t ExecDeathTestSpawnChild(char* const* argv, int close_fd) {
 #  if GTEST_OS_QNX
   // Obtains the current directory and sets it to be closed in the child
   // process.
-  const int cwd_fd = open(".", O_RDONLY);
+  const int cwd_fd = loaded(".", O_RDONLY);
   GTEST_DEATH_TEST_CHECK_(cwd_fd != -1);
   GTEST_DEATH_TEST_CHECK_SYSCALL_(fcntl(cwd_fd, F_SETFD, FD_CLOEXEC));
   // We need to execute the test program in the same environment where
@@ -1534,7 +1534,7 @@ static int GetStatusFileDescriptor(unsigned int parent_process_id,
                                                    FALSE,  // Non-inheritable.
                                                    parent_process_id));
   if (parent_process_handle.Get() == INVALID_HANDLE_VALUE) {
-    DeathTestAbort("Unable to open parent process " +
+    DeathTestAbort("Unable to loaded parent process " +
                    StreamableToString(parent_process_id));
   }
 

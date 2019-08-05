@@ -83,9 +83,22 @@ CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp -o CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.s
 
+CMakeFiles/PrefixTest.dir/src/Node.cpp.o: CMakeFiles/PrefixTest.dir/flags.make
+CMakeFiles/PrefixTest.dir/src/Node.cpp.o: ../src/Node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PrefixTest.dir/src/Node.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PrefixTest.dir/src/Node.cpp.o -c /home/shiro/CLionProjects/PrefixNotationParser/src/Node.cpp
+
+CMakeFiles/PrefixTest.dir/src/Node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PrefixTest.dir/src/Node.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shiro/CLionProjects/PrefixNotationParser/src/Node.cpp > CMakeFiles/PrefixTest.dir/src/Node.cpp.i
+
+CMakeFiles/PrefixTest.dir/src/Node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PrefixTest.dir/src/Node.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shiro/CLionProjects/PrefixNotationParser/src/Node.cpp -o CMakeFiles/PrefixTest.dir/src/Node.cpp.s
+
 CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o: CMakeFiles/PrefixTest.dir/flags.make
 CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o: ../tests/main_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o -c /home/shiro/CLionProjects/PrefixNotationParser/tests/main_test.cpp
 
 CMakeFiles/PrefixTest.dir/tests/main_test.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/PrefixTest.dir/tests/main_test.cpp.s: cmake_force
 
 CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o: CMakeFiles/PrefixTest.dir/flags.make
 CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o: ../tests/DataLoaderTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o -c /home/shiro/CLionProjects/PrefixNotationParser/tests/DataLoaderTest.cpp
 
 CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.s: cmake_force
 
 CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o: CMakeFiles/PrefixTest.dir/flags.make
 CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o: ../tests/NodeTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o -c /home/shiro/CLionProjects/PrefixNotationParser/tests/NodeTest.cpp
 
 CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.s: cmake_force
 
 CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o: CMakeFiles/PrefixTest.dir/flags.make
 CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o: ../tests/PrefixExpressionTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.o -c /home/shiro/CLionProjects/PrefixNotationParser/tests/PrefixExpressionTest.cpp
 
 CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.i: cmake_force
@@ -139,6 +152,7 @@ CMakeFiles/PrefixTest.dir/tests/PrefixExpressionTest.cpp.s: cmake_force
 PrefixTest_OBJECTS = \
 "CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o" \
 "CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.o" \
+"CMakeFiles/PrefixTest.dir/src/Node.cpp.o" \
 "CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o" \
 "CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o" \
 "CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o" \
@@ -149,6 +163,7 @@ PrefixTest_EXTERNAL_OBJECTS =
 
 PrefixTest: CMakeFiles/PrefixTest.dir/src/DataLoader.cpp.o
 PrefixTest: CMakeFiles/PrefixTest.dir/src/PrefixExpression.cpp.o
+PrefixTest: CMakeFiles/PrefixTest.dir/src/Node.cpp.o
 PrefixTest: CMakeFiles/PrefixTest.dir/tests/main_test.cpp.o
 PrefixTest: CMakeFiles/PrefixTest.dir/tests/DataLoaderTest.cpp.o
 PrefixTest: CMakeFiles/PrefixTest.dir/tests/NodeTest.cpp.o
@@ -157,7 +172,7 @@ PrefixTest: CMakeFiles/PrefixTest.dir/build.make
 PrefixTest: lib/libgmockd.a
 PrefixTest: lib/libgtestd.a
 PrefixTest: CMakeFiles/PrefixTest.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable PrefixTest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shiro/CLionProjects/PrefixNotationParser/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable PrefixTest"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PrefixTest.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

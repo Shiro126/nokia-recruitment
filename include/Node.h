@@ -39,6 +39,8 @@ private:
      * @return
      */
     bool isHighPriorityOperatorNode();
+
+    bool areSonsValueNodes();
 public:
 
 

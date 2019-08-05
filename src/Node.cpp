@@ -28,7 +28,7 @@ void Node::setValue(const std::string &valueString) {
 }
 
 bool Node::isOperatorNode() {
-    return (value[0] == '*') || (value[0] == '\\')
+    return (value[0] == '*') || (value[0] == '/')
            || (value[0] == '-') || (value[0] == '+');
 }
 
@@ -37,5 +37,12 @@ bool Node::isLowPriorityOperatorNode() {
 }
 
 bool Node::isHighPriorityOperatorNode() {
-    return (value[0] == '*') || (value[0] == '\\');
+    return (value[0] == '*') || (value[0] == '/');
+}
+
+bool Node::areSonsValueNodes() {
+    if(getRSon() && getLSon() != nullptr)
+        return !(getRSon()->isOperatorNode() || getLSon()->isOperatorNode());
+    return false;
+
 }

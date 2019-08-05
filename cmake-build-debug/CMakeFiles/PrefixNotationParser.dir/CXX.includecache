@@ -10,6 +10,12 @@
 string
 -
 
+../include/InvalidExpressionError.h
+utility
+-
+string
+-
+
 ../include/Node.h
 utility
 -
@@ -26,13 +32,13 @@ DataLoader.h
 string
 -
 
-/home/shiro/CLionProjects/PrefixNotationParser/main.cpp
+/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.cpp
+PrefixExpression.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/PrefixExpression.h
+Node.h
+/home/shiro/CLionProjects/PrefixNotationParser/src/Node.h
 iostream
 -
-DataLoader.h
-/home/shiro/CLionProjects/PrefixNotationParser/DataLoader.h
-Node.h
-/home/shiro/CLionProjects/PrefixNotationParser/Node.h
-PrefixExpression.h
-/home/shiro/CLionProjects/PrefixNotationParser/PrefixExpression.h
+InvalidExpressionError.h
+-
 

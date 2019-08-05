@@ -22,12 +22,14 @@ class PrefixExpression {
      */
     int xValue{};
 
+    bool x{};
 
+private:
     /**
      * Prints the tree in preorder fashion.
      * @param node -  beginning node.
      */
-    void printPreorder(Node *node);
+    void printPreorder(std::ostream& output, Node *node);
 
     /**
      * Function that calculates the value of expression from given tree point
@@ -38,9 +40,10 @@ class PrefixExpression {
 
     /**
      * Helper function that prints expressions in standard notation from a given node
+     * @param output output stream
      * @param node  starting node
      */
-    void standardPrintHelper(Node *node);
+    void standardPrintHelper(std::ostream& output,Node *node);
 
     /**
      *
@@ -65,6 +68,8 @@ class PrefixExpression {
     int createFromStringHelper(const std::string &expressionString, int index, Node *newNode);
 
 
+
+
 public:
 
     /**
@@ -87,12 +92,13 @@ public:
     /**
      * Prints expression in prefix notation
      */
-    void print();
+    void print(std::ostream& output);
 
     /**
      * Prints expression in standard notation
+     * @param output output stream
      */
-    void printInStandard();
+    void printInStandard(std::ostream& output);
 
     /**
      * calculates expression value
@@ -101,6 +107,17 @@ public:
      */
     int calculate();
 
+    void simplify();
+
+    bool hasX();
+
+    void setX(int x);
+
+    int getXValue() const;
+
+    PrefixExpression();
+
+    bool simplifyHelper(Node *pNode);
 };
 
 

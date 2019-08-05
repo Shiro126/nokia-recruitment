@@ -18,7 +18,7 @@ TEST_F(NodeFixture, NodeFixture_NodeInit_Test) {
 TEST_F(NodeFixture, NodeFixture_AccessSons_Test) {
     Node parent{"Init"};
     parent.setLSon(std::move(std::make_unique<Node>("LSon")));
-    parent.setRSon(std::move(std::make_unique<Node>("LSon")));
+    parent.setRSon(std::move(std::make_unique<Node>("RSon")));
     EXPECT_EQ("LSon", parent.getLSon()->getValue());
     EXPECT_EQ("RSon", parent.getRSon()->getValue());
 }

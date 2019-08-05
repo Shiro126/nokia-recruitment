@@ -3,6 +3,7 @@
 
 CMakeFiles/PrefixNotationParser.dir/main.cpp.o
  ../include/DataLoader.h
+ ../include/InvalidExpressionError.h
  ../include/Node.h
  ../include/PrefixExpression.h
  /home/shiro/CLionProjects/PrefixNotationParser/main.cpp

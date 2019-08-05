@@ -10,13 +10,12 @@
 
 class DataLoader {
 private:
-    std::string expressionString{};
-    int xValue{};
-    bool loaded = false;
 
     bool hasX();
     bool hasCorrectCharacters();
-
+    std::string expressionString{};
+    int xValue{};
+    bool loaded = false;
 
 
 public:
@@ -29,6 +28,8 @@ public:
     const std::string &getExpressionString() const;
 
     void readFromFile(const std::string &fileName);
+
+    DataLoader();
 };
 
 

@@ -48,7 +48,7 @@ void DataLoader::readFromFile(const std::string &fileName) {
 
     if(!file)
     {
-        throw InvalidExpressionError{"Could not loaded the file named: " + fileName};
+        throw InvalidExpressionError{"Could not load the file named: " + fileName};
 
     } else {
         getline(file,expressionString);
@@ -75,3 +75,5 @@ void DataLoader::readFromFile(const std::string &fileName) {
 
 
 }
+
+DataLoader::DataLoader() {}

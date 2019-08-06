@@ -69,6 +69,7 @@ private:
 
 
 
+    bool simplifyHelper(Node *pNode);
 
 public:
 
@@ -106,7 +107,9 @@ public:
      *
      */
     int calculate();
-
+    /**
+     * Used to simplify expression
+     */
     void simplify();
 
     bool hasX();
@@ -117,7 +120,6 @@ public:
 
     PrefixExpression();
 
-    bool simplifyHelper(Node *pNode);
 };
 
 

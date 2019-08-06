@@ -16,6 +16,7 @@ private:
     std::string expressionString{};
     int xValue{};
     bool loaded = false;
+  //  friend class MockDataLoader;
 
 
 public:

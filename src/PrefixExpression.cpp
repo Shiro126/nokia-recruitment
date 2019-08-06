@@ -226,6 +226,7 @@ bool PrefixExpression::simplifyHelper(Node *node) {
         return simplified;
 
     if(node->isOperatorNode())
+    {
         if(!node->areSonsValueNodes())
         {
             if(node->getLSon()->isOperatorNode())
@@ -234,41 +235,36 @@ bool PrefixExpression::simplifyHelper(Node *node) {
             if(node->getRSon()->isOperatorNode())
                 simplified |= simplifyHelper (node->getRSon());
             return simplified;
-        } else
-        {
-            switch (node->getValue()[0])
-            {
+        }
+        else {
+            switch (node->getValue()[0]) {
                 case '+':
-                    if(calculateHelper(node->getLSon()) == 0)
-                    {
+                    if (calculateHelper(node->getLSon()) == 0) {
                         node->lSon = nullptr;
-                        node->value = node ->getRSon() -> getValue();
+                        node->value = node->getRSon()->getValue();
                         node->rSon = nullptr;
                         simplified = true;
                         break;
                     }
-                    if(calculateHelper(node->getRSon()) == 0)
-                    {
+                    if (calculateHelper(node->getRSon()) == 0) {
                         node->rSon = nullptr;
-                        node->value = node ->getLSon() -> getValue();
+                        node->value = node->getLSon()->getValue();
                         node->lSon = nullptr;
                         simplified = true;
                         break;
                     }
                     break;
                 case '-':
-                    if(calculateHelper(node->getRSon()) == 0)
-                    {
-                        node->value = node ->getLSon() -> getValue();
+                    if (calculateHelper(node->getRSon()) == 0) {
+                        node->value = node->getLSon()->getValue();
                         node->rSon = nullptr;
                         node->lSon = nullptr;
                         simplified = true;
                         break;
                     }
-                    if(calculateHelper(node->getRSon()) == calculateHelper(node->getLSon()))
-                    {
+                    if (calculateHelper(node->getRSon()) == calculateHelper(node->getLSon())) {
                         node->lSon = nullptr;
-                        node->value ="0";
+                        node->value = "0";
                         node->rSon = nullptr;
                         simplified = true;
                         break;
@@ -276,34 +272,30 @@ bool PrefixExpression::simplifyHelper(Node *node) {
                     }
                     break;
                 case '*':
-                    if(calculateHelper(node->getLSon()) == 0)
-                    {
+                    if (calculateHelper(node->getLSon()) == 0) {
                         node->lSon = nullptr;
                         node->value = '0';
                         node->rSon = nullptr;
                         simplified = true;
                         break;
                     }
-                    if(calculateHelper(node->getRSon()) == 0)
-                    {
+                    if (calculateHelper(node->getRSon()) == 0) {
                         node->lSon = nullptr;
-                        node->value ='0';
+                        node->value = '0';
                         node->rSon = nullptr;
                         simplified = true;
                         break;
                     }
-                    if(calculateHelper(node->getLSon()) == 1)
-                    {
+                    if (calculateHelper(node->getLSon()) == 1) {
                         node->lSon = nullptr;
-                        node->value = node ->getRSon() -> getValue();
+                        node->value = node->getRSon()->getValue();
                         node->rSon = nullptr;
                         simplified = true;
                         break;
                     }
-                    if(calculateHelper(node->getRSon()) == 1)
-                    {
+                    if (calculateHelper(node->getRSon()) == 1) {
 
-                        node->value = node ->getLSon() -> getValue();
+                        node->value = node->getLSon()->getValue();
                         node->lSon = nullptr;
                         node->rSon = nullptr;
                         simplified = true;
@@ -311,8 +303,7 @@ bool PrefixExpression::simplifyHelper(Node *node) {
                     }
                     break;
                 case '/':
-                    if(calculateHelper(node->getLSon()) == 0)
-                    {
+                    if (calculateHelper(node->getLSon()) == 0) {
                         node->lSon = nullptr;
                         node->value = '0';
                         node->rSon = nullptr;
@@ -323,6 +314,7 @@ bool PrefixExpression::simplifyHelper(Node *node) {
             }
             return simplified;
         }
+    }
     return simplified;
 }
 

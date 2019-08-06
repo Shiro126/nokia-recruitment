@@ -7,8 +7,18 @@
 #include <gmock/gmock.h>
 #include "PrefixExpression.h"
 #include "InvalidExpressionError.h"
-class PrefixExpressionFixture : ::testing::Test {};
+/*
+class MockDataLoader : public DataLoader {
+public:
+    MOCK_METHOD0(getXValue, int ());
+    MOCK_CONST_METHOD0(getExpressionString, std::string &());
 
+    void setData(std::string str, int x){
+        xValue = x;
+        expressionString = std::move(str);
+    }
+};
+ */
 TEST(ExpressionTest, ExpressionTest_CalculationWithX_Test) {
     PrefixExpression expression{"+ x - 2 3"};
     expression.setX(5);
@@ -62,4 +72,32 @@ TEST(ExpressionTest, ExpressionTest_PrintInStandardWithBracketsDiv_Test) {
 }
 
 
+TEST(ExpressionTest, SimplifyPlusMinusTest) {
+    PrefixExpression expression{"+-2+2 0- 2 2"};
+    expression.simplify();
+    std::stringstream ss;
+    expression.printInStandard(ss);
+    EXPECT_EQ(ss.str(), "0 ");
+}
 
+
+TEST(ExpressionTest, SimplifyMulDivTest) {
+    PrefixExpression expression{"*/0 2 * 1 * 6 1"};
+    expression.simplify();
+    std::stringstream ss;
+    expression.printInStandard(ss);
+    EXPECT_EQ(ss.str(), "0 ");
+}
+
+/*
+TEST(ExpressionTest, DataLoaderMock) {
+    MockDataLoader loader;
+    PrefixExpression expression{};
+    loader.setData( "+ 2 3", 5);
+    EXPECT_CALL(loader, getXValue()).Times(1);
+    EXPECT_CALL(loader, getExpressionString()).Times(1);
+    expression.load(loader);
+
+    EXPECT_EQ(expression.getXValue(), 5);
+}
+*/
